@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions: 
+      nodejs: 18
+    commands:
+      - npm install -g @angular/cli
+
+  pre_build:
+    commands:
+      - npm install --legacy-peer-deps
+      - ls
+      - pwd
+  
+  build:
+    commands:
+      - ng build --configuration=production
+      - ls
+      - pwd
+
+artifacts:
+  base-directory: "dist/my-angular-project/browser"
+  files:
+    - '**/*'

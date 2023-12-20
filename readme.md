@@ -1,0 +1,1 @@
+## Hello world angular app with buildspec.yml file for AWS CodeDeploy
